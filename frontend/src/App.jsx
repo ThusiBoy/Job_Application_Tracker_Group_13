@@ -1,12 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+
 import ProfilePage from "./components/ProfilePage";
 import JobTrackingPage from "./pages/JobTrackingPage";
 
 function App() {
   return (
-    <div>
-      <ProfilePage />
-      <JobTrackingPage />
-    </div>
+    <Routes>
+      <Route path="/" element={<ProfilePage />} />
+      <Route path="/tracking" element={<JobTrackingPage />} />
+    </Routes>
   );
 }
 
